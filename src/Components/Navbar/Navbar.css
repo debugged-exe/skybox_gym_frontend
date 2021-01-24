@@ -1,0 +1,47 @@
+.none{
+    text-decoration: none;
+    list-style: none;
+}
+
+.line{
+    width: 33px;
+    background-color: rgb(255, 255, 255);
+    height: 4px;
+    margin: 5px 3px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.cross{
+    display: none;
+}
+
+.point:hover{
+    color:#00D0FF;
+    font-weight: bold;
+}
+@media only screen and (max-width: 800px) {
+    .cross{
+        display: inline-block;
+    }
+    .navbar-resp{
+        flex-direction: column;
+    }
+    .hidden{
+        display: none;
+    }
+    .visible{
+        display: block;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hide{
+        display: none;
+    }
+    .line{
+        display: block;
+    }
+}
