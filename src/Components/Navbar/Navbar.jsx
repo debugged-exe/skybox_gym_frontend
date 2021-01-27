@@ -37,13 +37,13 @@ const Navbar = ()  => {
             </span>
                 <span className={`${dropdown}`}>
                     <ul style={{listStyle:'none'}} className={`flex ph4 ${navbar} justify-center items-center ${dropdown}`}>
-                        <li style={{cursor:'point',backgroundColor:'#00D0FF'}} className='f4 grow ph3 mv0 br2 black b pa2'>Enroll Now</li>
-                        <li className='none ph3 f4 mv0 tc pt2 point' href='#0'>Home</li>
-                        <li className='none ph3 f4 mv0 tc pt2 point' href='#0'>Events</li>
-                        <li className='none ph3 f4 mv0 tc pt2 point' href='#0'>Blog</li>
-                        <li className='none ph3 f4 mv0 tc pt2 point' href='#0'>About Us</li>
-                        <li className='none ph3 f4 mv0 tc pt2 point' href='#0'>Contact Us</li>
-                        <li className='none ph3 f4 mv0 tc pt2 point' href='#0'>SignIn</li>
+                        <li style={{cursor:'point',backgroundColor:'#00D0FF'}} className='f4 grow ph3 mv0 br2 black b pa2 pointer'>Enroll Now</li>
+                        <li className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' href='#0'>Home</li>
+                        <li className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' href='#0'>Events</li>
+                        <li className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' href='#0'>Blog</li>
+                        <li className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' href='#0'>About Us</li>
+                        <li className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' href='#0'>Contact Us</li>
+                        <li className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' href='#0'>SignIn</li>
                         <li className='tc'><p className={`f6 link dim ph3 pv2 mb2 dib white bg-dark-blue cross`} href='#0'
                         onClick={()=>hamburger()}
                         >
