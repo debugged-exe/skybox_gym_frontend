@@ -19,50 +19,29 @@ const [counterArray, setCounterArray] = useState([
     }
 ]);
 const runCounter = () => {
-    setTraineeCount(0);
-    setTrainerCount(0);
-    let trainer  = counterArray[0].count;
-    let trainee  = counterArray[1].count;
-
-    let step1 = trainer / 2000;
-    let step2 = trainee / 2000;
-
-
-    let tr;
-    let te;
-
-    let countIt = ()  => {
-        let displayedCountTrainer = +trainerCount;
-        let displayedCountTrainee = +traineeCount;
-            if (displayedCountTrainer < trainer ) {
-                setTrainerCount(Math.ceil(displayedCountTrainer + step1)); 
-                setTimeout(countIt, 25);
-                // console.log(trainerCount);
-                tr = displayedCountTrainer;
-            }
-            else {
-                setTrainerCount(trainer);
-                tr = displayedCountTrainer;
-            }
-            if (displayedCountTrainee < trainee ) {
-                setTraineeCount(Math.ceil(displayedCountTrainee + step2)); 
-                setTimeout(countIt, 25);
-                // console.log(traineeCount);
-                te = displayedCountTrainee;
-            }
-            else {
-                setTrainerCount(trainee);
-                te = displayedCountTrainee;
-            }
+    const trainer = counterArray[0].count 
+    const trainee = counterArray[1].count
+    const displayedCount1 = 0
+    const displayedCount1 = 0
+    if(displayedCount1<trainer || displayedCount2<trainee)
+    {
+        if(displayedCount1===trainer)
+        {
+            setTrainerCount(trainer);
         }
-
-        
-        // if(tr !== trainer && te !== trainee){
-        //     countIt();
-        // }
-        // else{
-        //     return 0;
-        // }
+        if(displayedCount2===trainee)
+        {
+            setTraineeCount(trainer);
+        }
+        if(displayedCount1<trainer && displayedCount2<trainee)
+        {
+            displayedCount1 = displayedCount1+1;
+            setTrainerCount(displayedCount1);
+            displayedCount2 = displayedCount2+1;
+            setTraineeCount(displayedCount2);
+        }
+        if(displayedCount1<trainer)
+    }
 }
 
 useEffect(()=>{

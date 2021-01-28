@@ -20,7 +20,6 @@
 
 .point:hover{
     color:#00D0FF;
-    font-weight: bold;
 }
 @media only screen and (max-width: 800px) {
     .cross{
