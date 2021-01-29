@@ -6,12 +6,16 @@ import ContactUs from './Components/ContactUs/ContactUs';
 import SignInPage from './Components/SignInPage/SignInPage';
 import TrainerRegister from './Components/TrainerRegister/TrainerRegister.js';
 import TraineeRegister from './Components/TraineeRegister/TraineeRegister.js';
+import About from './Components/AboutUs/About';
+import Home from './Components/Home/Home';
 
 function App() {
   return (
     <div>
       <Navbar/>
+      <Home/>
       <Counter/>
+      <About/>
       <ContactUs/>
       <SignInPage />
       <TrainerRegister />
