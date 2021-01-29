@@ -36,7 +36,6 @@ class TraineeSignIn extends React.Component{
 					name="email" 
 					type="email" 
 					value={this.state.email} 
-					required 
 					handleChange={this.handleChange}
 					required
 					/>
@@ -45,7 +44,6 @@ class TraineeSignIn extends React.Component{
 					name="password" 
 					type="password" 
 					value={this.state.password} 
-					required 
 					handleChange={this.handleChange}
 					required
 					/>
