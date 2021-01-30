@@ -8,6 +8,7 @@ import TrainerRegister from './Components/TrainerRegister/TrainerRegister.js';
 import TraineeRegister from './Components/TraineeRegister/TraineeRegister.js';
 import About from './Components/AboutUs/About';
 import Home from './Components/Home/Home';
+import TrainerCardList from './Components/TrainersCards/TrainerCardList';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Home/>
       <Counter/>
       <About/>
+      <TrainerCardList/>
       <ContactUs/>
       <SignInPage />
       <TrainerRegister />
