@@ -18,8 +18,8 @@ const [counterArray, setCounterArray] = useState([
 ]);
 
     return (
-        <section>
-            <div className='mt5 flex flex-wrap justify-around items-center f3 pointer'>
+        <section className='mv3'>
+            <div className='mt3 flex flex-wrap justify-around items-center f3 pointer'>
                 <div style={{ width: '300px', background: '#00D0FF' }} className='flex flex-wrap justify-center items-center flex-column  br3 pa3 ma2 grow shadow-2'>
                     <CgGym size='3.5rem'/>
                     <p className='f1 mv0 b'>

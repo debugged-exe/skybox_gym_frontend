@@ -9,6 +9,7 @@ import TraineeRegister from './Components/TraineeRegister/TraineeRegister.js';
 import About from './Components/AboutUs/About';
 import Home from './Components/Home/Home';
 import TrainerCardList from './Components/TrainersCards/TrainerCardList';
+import PackageList from './Components/PackageCards/PackageList';
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
       <Navbar/>
       <Home/>
       <Counter/>
-      <About/>
+      <PackageList/>
       <TrainerCardList/>
+      <About/>
       <ContactUs/>
       <SignInPage />
       <TrainerRegister />
