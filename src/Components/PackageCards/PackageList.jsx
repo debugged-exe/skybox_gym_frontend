@@ -28,8 +28,8 @@ const PackageList = () => {
     return (
         <div className='bg-black white'>
             <div className='flex items-center mh4'> 
-                <h1 className='ma2'>Online</h1>
-                <h1 className='ma2'>Offline</h1>
+                <h1 className='none ph3 f3 mv0 tc pt2  btn btn-left pointer pl2 f2' href='#0'>Offline</h1>
+                <h1 className='none ph3 f3 mv0 tc pt2  btn btn-left pointer pl2 f2' href='#0'>Online</h1>
             </div>
         <div className='flex justify-between items-center flex-wrap'>
             {

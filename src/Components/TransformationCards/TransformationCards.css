@@ -1,0 +1,11 @@
+@media only screen and (max-width: 500px) {
+    .wrapping{
+        flex-direction: column;
+    }
+    .width{
+        width: 100%;
+    }
+    .padding{
+        padding: 0;
+    }
+}

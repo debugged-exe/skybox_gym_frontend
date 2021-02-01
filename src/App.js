@@ -10,6 +10,7 @@ import About from './Components/AboutUs/About';
 import Home from './Components/Home/Home';
 import TrainerCardList from './Components/TrainersCards/TrainerCardList';
 import PackageList from './Components/PackageCards/PackageList';
+import TransformationCardList from './Components/TransformationCards/TransformationCardList';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <PackageList/>
       <TrainerCardList/>
       <About/>
+      <TransformationCardList/>
       <ContactUs/>
       <SignInPage />
       <TrainerRegister />
