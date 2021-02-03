@@ -22,7 +22,6 @@ const Navbar = ()  => {
     }
 
     return(
-        <div>
             <nav className={`flex bg-black white items-center justify-between pv0 mv0 flex-wrap w-100 ${navbar}`}>
                 <span>
                     <div style={{height:'60px', width:'60px'}} className='mh2'>
@@ -38,23 +37,22 @@ const Navbar = ()  => {
             </span>
                 <span className={`${dropdown}`}>
                     <ul style={{listStyle:'none'}} className={`flex ph4 ${navbar} justify-center items-center ${dropdown}`}>
-                        <Link style={{cursor:'point',backgroundColor:'#00D0FF'}} className='f4 grow ph3 mv0 br2 black b pa2 pointer' to='/enroll'>Enroll Now</Link>
-                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' to='/'>Home</Link>
-                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' to='#0'>Events</Link>
-                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' to='#0'>Blog</Link>
-                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' to='#0'>About Us</Link>
-                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' to='#0'>Contact Us</Link>
-                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2' to='/signin'>SignIn</Link>
-                        <Link className='tc'><p className={`f6 link dim ph3 pv2 mb2 dib white bg-dark-blue cross`} href='#0'
+                        <Link style={{cursor:'point',backgroundColor:'#00D0FF'}} className='f4 grow ph3 mv0 br2 black b pa2 pointer flex justify-center items-center' to='/enroll'>Enroll Now</Link>
+                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='/'>Home</Link>
+                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>Events</Link>
+                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>Blog</Link>
+                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>About Us</Link>
+                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>Contact Us</Link>
+                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='/signin'>SignIn</Link>
+                        <p className='tc'><Link className={`f6 link dim ph3 pv2 mb2 dib white bg-dark-blue cross flex justify-center items-center`} href='#0'
                         onClick={()=>hamburger()}
                         >
                         X
-                        </p>
                         </Link>
+                        </p>
                     </ul>
                 </span>
             </nav>
-        </div>
     );
 }
 
