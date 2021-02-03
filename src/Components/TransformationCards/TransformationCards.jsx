@@ -3,7 +3,7 @@ import './TransformationCards.css';
 
 const TransformationCards = ({transform}) => {
     return(
-            <div className='ba w-90 flex justify-center items-center flex-column flex-wrap'>
+            <div className='w-90 flex justify-center items-center flex-column flex-wrap'>
                 <div className='flex justify-around items-center wrapping'>
                     <section class="tc pa3 pa5-ns">
                         <article class="hide-child relative ba b--black-20 mw5 center">

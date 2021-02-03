@@ -26,7 +26,9 @@ const packagesOnline = [
 
 const PackageList = () => {
     return (
-        <div className='bg-black white'>
+        <div className='mv5 bg-black white'>
+            <h1 className='tc pt4'>Our Packages</h1>
+        <div className=''>
             <div className='flex items-center mh4'> 
                 <h1 className='none ph3 f3 mv0 tc pt2  btn btn-left pointer pl2 f2' href='#0'>Offline</h1>
                 <h1 className='none ph3 f3 mv0 tc pt2  btn btn-left pointer pl2 f2' href='#0'>Online</h1>
@@ -40,6 +42,7 @@ const PackageList = () => {
         </div>
         <div className='mt4 mb4 pb4'>
             <img src='https://t4.ftcdn.net/jpg/01/74/83/85/360_F_174838534_6utDVpn6xYZ7usgGVKtYoym6VrHi4Sj1.jpg' alt='offers'/>
+        </div>
         </div>
         </div>
     )

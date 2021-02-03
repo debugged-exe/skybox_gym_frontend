@@ -51,7 +51,7 @@ const trainersArray = [
 
 const TrainerCardList = () => {
     return(
-        <div>
+        <div className='ma6 margin-horizontal'>
             <h1 className='tc'>Our Trainers</h1>
         <Carousel breakPoints={breakPoints}>
             {trainersArray.map(trainer => 

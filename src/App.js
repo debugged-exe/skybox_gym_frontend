@@ -1,31 +1,19 @@
 import './App.css';
+import {Route,Switch} from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
-import Counter from './Components/Counter/Counter';
 import Footer from './Components/Footer/Footer';
-import ContactUs from './Components/ContactUs/ContactUs';
-import SignInPage from './Components/SignInPage/SignInPage';
-import TrainerRegister from './Components/TrainerRegister/TrainerRegister.js';
-import TraineeRegister from './Components/TraineeRegister/TraineeRegister.js';
-import About from './Components/AboutUs/About';
-import Home from './Components/Home/Home';
-import TrainerCardList from './Components/TrainersCards/TrainerCardList';
-import PackageList from './Components/PackageCards/PackageList';
-import TransformationCardList from './Components/TransformationCards/TransformationCardList';
+import HomePage from './Pages/HomePage/HomePage';
+import SignInPage from './Pages/SignInPage/SignInPage';
+import EnrollPage from './Pages/EnrollPage/EnrollPage';
 
 function App() {
   return (
     <div>
       <Navbar/>
-      <Home/>
-      <Counter/>
-      <PackageList/>
-      <TrainerCardList/>
-      <About/>
-      <TransformationCardList/>
-      <ContactUs/>
-      <SignInPage />
-      <TrainerRegister />
-      <TraineeRegister />
+      <Switch/>
+      <Route exact path='/' component={HomePage}/>
+      <Route exact path='/signin' component={SignInPage}/>
+      <Route exact path='/enroll' component={EnrollPage}/>
       <Footer/>
     </div>
   );

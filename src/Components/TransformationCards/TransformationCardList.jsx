@@ -30,11 +30,14 @@ const transformation = [
 
 const TransformationCardList = () => {
     return(
+        <div className='mv6 mh5 margin-horizontal'>
+            <h1 className='tc'>Our Happy Transforms</h1>
         <Carousel enableAutoPlay='true' focusOnSelect='true' breakPoints={breakPoints}>
             {transformation.map(transform => 
                 <TransformationCards transform = {transform} />
             )}
         </Carousel>
+        </div>
     );
 }
 
