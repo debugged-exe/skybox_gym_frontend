@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import 'tachyons';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
+import {ReactComponent as Logo} from '../../Assets/logo.svg';
 
 const Navbar = ()  => {
 
@@ -25,7 +26,7 @@ const Navbar = ()  => {
             <nav className={`flex bg-black white items-center justify-between pv0 mv0 flex-wrap w-100 ${navbar}`}>
                 <span>
                     <div style={{height:'60px', width:'60px'}} className='mh2'>
-                        <img style={{height:'100%', width:'100%'}} src='http://skyboxathlete.com/wp-content/uploads/2020/12/WhatsApp-Image-2020-12-17-at-1.44.44-PM-1.jpeg' alt='Logo'/>
+                        <Logo style={{height:'100%', width:'100%'}} alt='Logo'/>
                     </div>
                 </span>
                 <span className={`hamburger ${line} pr2`}

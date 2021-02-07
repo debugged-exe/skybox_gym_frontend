@@ -1,11 +1,11 @@
 import React from 'react';
-
+import RightBg from '../../Assets/callback_bg.png';
 const ContactUs = () => {
     return (
         <section style={{background:'', color:''}} className='flex justify-around items-center flex-wrap'>
             <span>
                 <div>
-                    <img src='https://icon2.cleanpng.com/20180209/yfq/kisspng-dumbbell-weight-training-olympic-weightlifting-bar-cartoon-dumbbell-5a7d55d7b2a2e2.9743379815181634157317.jpg' alt='bumbell' />
+                    <img src={RightBg} alt='bumbell' />
                 </div>
             </span>
             <span className='flex items-center pv4 justify-center'>

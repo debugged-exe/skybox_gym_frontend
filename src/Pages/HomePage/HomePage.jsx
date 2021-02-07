@@ -11,8 +11,8 @@ const HomePage = () => {
         <>
             <Home/>
             <TransformationCardList/>
-            <TrainerCardList/>
             <PackageList/>
+            <TrainerCardList/>
             <About/>
             <ContactUs/>
         </>
