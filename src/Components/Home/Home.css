@@ -1,16 +1,17 @@
 .home-background{
     width: 100%;
+    height: 100vh;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     backface-visibility: hidden;
     animation: slidingbg 80s linear infinite 0s;
     animation-timing-function: ease-in-out;
-    background-image: url('https://images.unsplash.com/photo-1605296867724-fa87a8ef53fd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+    background-image: url(../../Assets/HomeBg.png);
     background-blend-mode: darken;
 }
 
-@keyframes slidingbg{
+/* @keyframes slidingbg{
     0% {
         background-image:url('https://images.unsplash.com/photo-1581009137042-c552e485697a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
     }
@@ -27,11 +28,20 @@
         background-image:url('https://images.unsplash.com/photo-1605296867724-fa87a8ef53fd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
     }
  
-}
+} */
 
 @media only screen and (max-width:450px){
     .width{
         width: 100%;
         margin: 2%;
+    }
+}
+@media only screen and (max-width:700px){
+    .home-background{
+        height:100%;
+    }
+    .margin-6{
+        margin-right:0;
+        margin-left: 0;
     }
 }

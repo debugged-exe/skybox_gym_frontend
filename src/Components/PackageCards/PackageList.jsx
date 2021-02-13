@@ -55,12 +55,12 @@ class PackageList extends React.Component {
                 this.setState({ol:'false'})
         }
         return (
-            <div className='mv5'>
-            <div className='white' style={{backgroundColor:'#202020'}}>
-                <h1 className='pt4 pl3'>Training</h1>
-                <h1 className='pb4 pl3'>Services We Offer</h1>
+            <div style={{backgroundColor:'#323232'}} className='mv5 pb6 pt4'>
+            <div className='white'>
+                <h1 className='tc'>Training</h1>
+                <h1 className='tc'><span style={{color:'#00D0ff'}} >Services</span> We Offer</h1>
             </div>
-            <div className='shadow-2 mh6'>
+            <div className='shadow-2 mh6 margin-6 bg-white br4 pv5'>
                 <div className='flex items-center mh4'> 
                     <h1 className='none ph3 f3 mv0 tc pt2  btn btn-left pointer pl2 f2' href='#0' onClick={packageHandlerOl}>Online</h1>
                     <h1 className='none ph3 f3 mv0 tc pt2  btn btn-left pointer pl2 f2' href='#0' onClick={packageHandlerOff}>Offline</h1>
