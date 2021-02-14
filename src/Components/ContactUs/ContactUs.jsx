@@ -2,7 +2,7 @@ import React from 'react';
 import RightBg from '../../Assets/callback_bg.png';
 const ContactUs = () => {
     return (
-        <section style={{background:'', color:''}} className='flex justify-around items-center flex-wrap'>
+        <section id="enquire" style={{background:'', color:''}} className='flex justify-around items-center flex-wrap'>
             <span>
                 <div>
                     <img src={RightBg} alt='bumbell' />
