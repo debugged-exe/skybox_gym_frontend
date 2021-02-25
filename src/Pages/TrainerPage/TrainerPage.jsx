@@ -1,15 +1,12 @@
-import React from 'react';
+import {React,useState} from 'react';
 import 'tachyons';
+import Modal from 'react-modal';
 
-class TrainerPage extends React.Component{
-    constructor(){
-        super();
-        this.state = {
-            name:'',
-        }
-    }
+const TrainerPage = () => {
 
-    render(){
+  const [viewDets,setViewDets] = useState(false);
+  const [workoutModal,setworkoutModal] = useState(false);
+  const [dietModal,setDietModal] = useState(false);
         return(
             <div className='flex justify-center items-center flex-column'>
                 <div>
@@ -35,9 +32,9 @@ class TrainerPage extends React.Component{
                               <td className="pv3 pr3 bb b--black-20">@hassan</td>
                               <td className="pv3 pr3 bb b--black-20">hassan@companywithalongdomain.co</td>
                               <td className="pv3 pr3 bb b--black-20">14419232532474</td>
-                              <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0">ViewDets</a></td>
-                              <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0">SetDiet</a></td>
-                              <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0">SetWorkout</a></td>
+                              <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0" onClick={()=>setViewDets(true)} >ViewDets</a></td>
+                              <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0" onClick={()=>setDietModal(true)}>SetDiet</a></td>
+                              <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0" onClick={()=>setworkoutModal(true)}>SetWorkout</a></td>
                               <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0">SendMeetingLink</a></td>
                             </tr>
                                 </tbody>
@@ -45,9 +42,26 @@ class TrainerPage extends React.Component{
                             </div>
                         </div>
                 </div>
+              <Modal isOpen={viewDets}>
+              <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setViewDets(false)} >X</p>
+              <div>
+                height weight
+              </div>
+              </Modal>
+              <Modal isOpen={dietModal}>
+              <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setDietModal(false)} >X</p>
+              <div>
+                diet form
+              </div>
+              </Modal>
+              <Modal isOpen={workoutModal}>
+              <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setworkoutModal(false)} >X</p>
+              <div>
+                workout form
+              </div>
+              </Modal>
             </div>
         );
-    }
 }
 
 export default TrainerPage;

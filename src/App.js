@@ -7,6 +7,7 @@ import SignInPage from './Pages/SignInPage/SignInPage';
 import EnrollPage from './Pages/EnrollPage/EnrollPage';
 import TrainerPage from './Pages/TrainerPage/TrainerPage';
 import TraineePage from './Pages/TraineePage/TraineePage';
+import AdminPage from './Pages/AdminPage/AdminPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route exact path='/enroll' component={EnrollPage}/>
       <Route exact path='/trainer' component={TrainerPage}/>
       <Route exact path='/trainee' component={TraineePage}/>
+      <Route exact path='/admin' component={AdminPage}/>
       <Footer/>
     </div>
   );
