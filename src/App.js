@@ -12,8 +12,8 @@ import AdminPage from './Pages/AdminPage/AdminPage';
 function App() {
   return (
     <div>
+      <Switch>
       <Navbar/>
-      <Switch/>
       <Route exact path='/' component={HomePage}/>
       <Route exact path='/signin' component={SignInPage}/>
       <Route exact path='/enroll' component={EnrollPage}/>
@@ -21,6 +21,7 @@ function App() {
       <Route exact path='/trainee' component={TraineePage}/>
       <Route exact path='/admin' component={AdminPage}/>
       <Footer/>
+      </Switch>
     </div>
   );
 }
