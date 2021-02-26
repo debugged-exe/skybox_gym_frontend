@@ -1,7 +1,6 @@
 import React from 'react';
 import TrainerCard from './TrainerCard';
 import  Carousel from 'react-elastic-carousel'; 
-import styled from 'styled-components';
 
 const breakPoints = [
     { width : 1, itemsToShow : 1},
@@ -55,7 +54,7 @@ const TrainerCardList = () => {
             <h1 className='tc'>Our Trainers</h1>
         <Carousel breakPoints={breakPoints}>
             {trainersArray.map(trainer => 
-                <TrainerCard trainer={trainer}/>
+                <TrainerCard key={trainer.age} trainer={trainer}/>
             )}
         </Carousel>
         </div>
