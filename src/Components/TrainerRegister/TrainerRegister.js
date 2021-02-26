@@ -29,8 +29,72 @@ class TrainerRegister extends React.Component {
 			experience: '',
 			certification: '',
 			clients_handled: '',
-			specialization: ''
+			specialization: '',
+			contact: ''
 		});
+	}
+
+	trainerUpdateInfo = () => {
+		console.log('click')
+		const {name,email,contact,age,experience,certification,clients_handled,specialization} = this.state;
+		const info = {
+			name: name,
+			email: email,
+			contact: contact,
+			age: age,
+			experience: experience,
+			certification: certification,
+			clients_handled: clients_handled,
+			specialization: specialization
+		} 
+		const headers = new Headers();
+		headers.append('Content-Type','application/json');
+		
+		
+		
+		fetch('https://skybox-athlete.herokuapp.com/signup', {
+			method: "post",
+			headers: {
+				"Content-Type": "application/json"
+				},
+				body: JSON.stringify(info)
+	 }).then(res=>res.json())
+	 .then(res=>{
+		 if(res.user){
+			this.props.history.push('/trainee');
+		 }
+		 else if(res.errors){
+			alert(res.errors.email+'\n'+res.errors.password);
+		 }
+	 })
+	}
+
+	traineeRegister = () => {
+		console.log('click')
+		const sigindata = {
+			email: this.state.email,
+			password:this.state.password
+		} 
+		const headers = new Headers();
+		headers.append('Content-Type','application/json');
+		
+		
+		
+		fetch('https://skybox-athlete.herokuapp.com/signup', {
+			method: "post",
+			headers: {
+				"Content-Type": "application/json"
+				},
+				body: JSON.stringify(sigindata)
+	 }).then(res=>res.json())
+	 .then(res=>{
+		 if(res.user){
+			this.props.history.push('/trainee');
+		 }
+		 else if(res.errors){
+			alert(res.errors.email+'\n'+res.errors.password);
+		 }
+	 })
 	}
 
 	handleChange = (event) => {
@@ -61,6 +125,14 @@ class TrainerRegister extends React.Component {
 					name="email"
 					type="email"
 					value={this.state.email}
+					handleChange={this.handleChange}
+					required
+					/>
+					<FormInput 
+					label="Contact"
+					name="contact"
+					type="text"
+					value={this.state.contact}
 					handleChange={this.handleChange}
 					required
 					/>
@@ -106,7 +178,7 @@ class TrainerRegister extends React.Component {
 					handleChange={this.handleChange}
 					required
 					/>
-					<CustomButton type="submit">Enroll</CustomButton>
+					<CustomButton type="submit" onClick={this.traineeRegister}>Enroll</CustomButton>
 				</form>
 			</div>
 		);
