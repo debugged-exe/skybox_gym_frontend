@@ -31,11 +31,11 @@ class TraineeSignIn extends React.Component{
 			email: this.state.email,
 			password:this.state.password
 		} 
-		const headers = new Headers()
-		headers.append('Content-Type','application/json')
+		const headers = new Headers();
+		headers.append('Content-Type','application/json');
 
 		fetch('https://skybox-athlete.herokuapp.com/login',{
-			mode:'cors',
+			mode:'no-cors',
 			method:'post',
 			body:sigindata,
 			headers
