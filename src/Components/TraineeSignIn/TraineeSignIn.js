@@ -2,6 +2,7 @@ import React from 'react';
 import FormInput from '../FormInput/FormInput.js';
 import CustomButton from '../CustomButton/CustomButton.js';
 import './TraineeSignIn.scss';
+import {withRouter} from 'react-router'
 
 const initialState = {
 	email: '',
@@ -33,24 +34,26 @@ class TraineeSignIn extends React.Component{
 		} 
 		const headers = new Headers();
 		headers.append('Content-Type','application/json');
-
+		
+		
 		
 		fetch('https://skybox-athlete.herokuapp.com/login', {
-				method: "post",
-				headers: {
-					 "Content-Type": "application/json"
+			method: "post",
+			headers: {
+				"Content-Type": "application/json"
 				},
 				body: JSON.stringify(sigindata)
 	 }).then(res=>res.json())
 	 .then(res=>{
 		 if(res.user){
-			
+			this.props.history.push('/trainer');
 		 }
 		 else if(res.errors){
 			alert('Wrong Credentials');
 		 }
 	 })
 	}
+
 	render(){
 		return(
 			<div className="sign-in">
@@ -80,4 +83,4 @@ class TraineeSignIn extends React.Component{
 	}
 }
 
-export default TraineeSignIn;
+export default withRouter(TraineeSignIn);

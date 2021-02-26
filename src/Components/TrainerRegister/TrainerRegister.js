@@ -10,7 +10,8 @@ const initialState = {
 			experience: '',
 			certification: '',
 			clients_handled: '',
-			specialization: ''
+			specialization: '',
+			contact:''
 		}
 
 class TrainerRegister extends React.Component {
@@ -29,9 +30,52 @@ class TrainerRegister extends React.Component {
 			experience: '',
 			certification: '',
 			clients_handled: '',
-			specialization: ''
+			specialization: '',
+			contact: ''
 		});
 	}
+
+	trainerUpdateInfo = () => {
+		console.log('click')
+		const {name,email,contact,age,experience,certification,clients_handled,specialization} = this.state;
+		const info = {
+			name: name,
+			email: email,
+			contact: contact,
+			gender:'male',
+			age: age,
+			experience:{
+				years:experience,
+				clients_handled: clients_handled
+			},
+			certification: certification,
+			specialization:specialization
+		} 
+		const headers = new Headers();
+		headers.append('Content-Type','application/json');
+		
+		
+		
+		fetch('https://skybox-athlete.herokuapp.com/update-trainer', {
+			method: "post",
+			headers: {
+				"Content-Type": "application/json"
+				},
+				body: JSON.stringify(info)
+	 }).then(res=>res.json())
+	 .then(res=>{
+		 console.log(res);
+		 if(res.status=="success"){
+			this.props.history.push('/trainer');
+			console.log('donee')
+		 }
+		 else if(res.status=="failed"){
+			alert("could not save the data");
+		 }
+	 })
+	}
+
+	
 
 	handleChange = (event) => {
 		const {value, name} = event.target;
@@ -65,9 +109,17 @@ class TrainerRegister extends React.Component {
 					required
 					/>
 					<FormInput 
+					label="Contact"
+					name="contact"
+					type="number"
+					value={this.state.contact}
+					handleChange={this.handleChange}
+					required
+					/>
+					<FormInput 
 					label="Age"
 					name="age"
-					type="text"
+					type="number"
 					value={this.state.age}
 					onInput={this.numericFilter}
 					handleChange={this.handleChange}
@@ -106,7 +158,7 @@ class TrainerRegister extends React.Component {
 					handleChange={this.handleChange}
 					required
 					/>
-					<CustomButton type="submit">Enroll</CustomButton>
+					<CustomButton type="submit" onClick={this.trainerUpdateInfo}>Enroll</CustomButton>
 				</form>
 			</div>
 		);
