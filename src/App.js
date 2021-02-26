@@ -1,5 +1,5 @@
 import './App.css';
-import {Route,Switch} from 'react-router-dom';
+import {Route, Switch, HashRouter} from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import HomePage from './Pages/HomePage/HomePage';
@@ -12,16 +12,18 @@ import AdminPage from './Pages/AdminPage/AdminPage';
 function App() {
   return (
     <div>
-      <Switch>
+      <HashRouter basename='/'>
       <Navbar/>
+      <Switch>
       <Route exact path='/' component={HomePage}/>
       <Route exact path='/signin' component={SignInPage}/>
       <Route exact path='/enroll' component={EnrollPage}/>
       <Route exact path='/trainer' component={TrainerPage}/>
       <Route exact path='/trainee' component={TraineePage}/>
       <Route exact path='/admin' component={AdminPage}/>
-      <Footer/>
       </Switch>
+      <Footer/>
+      </HashRouter>
     </div>
   );
 }
