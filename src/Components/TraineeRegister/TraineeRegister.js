@@ -6,6 +6,9 @@ import './TraineeRegister.scss';
 const initialState = {
 	name: '',
 	email: '',
+	contact:999,
+	gender: 'male',
+	age:22,
 	target: '',
 	medical: '',
 	mode: '',
@@ -24,6 +27,9 @@ class TraineeRegister extends React.Component {
 		this.setState({
 			name: '',
 			email: '',
+			contact:999,
+			gender: 'male',
+			age:22,
 			target: '',
 			medical: '',
 			mode: '',
@@ -35,6 +41,45 @@ class TraineeRegister extends React.Component {
 	handleChange = (event) => {
 		const {value, name} = event.target;
 		this.setState({[name]: value});
+	}
+
+	traineeUpdateInfo = () => {
+		console.log('click')
+		const {name,email,contact,gender,age,target,medical,mode,place,time} = this.state;
+		const info = {
+			name: name,
+			email: email,
+			contact: contact,
+			gender: gender,
+			age: age,
+			target: target,
+			medical: medical,
+			mode: mode,
+			place: place,
+			time: time
+		} 
+		const headers = new Headers();
+		headers.append('Content-Type','application/json');
+		
+		
+		
+		fetch('https://skybox-athlete.herokuapp.com/update-trainee', {
+			method: "post",
+			headers: {
+				"Content-Type": "application/json"
+				},
+				body: JSON.stringify(info)
+	 }).then(res=>res.json())
+	 .then(res=>{
+		 console.log(res);
+		 if(res.status=="success"){
+			this.props.history.push('/trainer');
+			console.log('donee')
+		 }
+		 else if(res.status=="failed"){
+			alert("could not save the data");
+		 }
+	 })
 	}
 
 	render() {
@@ -124,7 +169,7 @@ class TraineeRegister extends React.Component {
 					handleChange={this.handleChange}
 					required
 					/>
-					<CustomButton type="submit">Enroll</CustomButton>
+					<CustomButton type="submit" onClick={this.traineeUpdateInfo}>Enroll</CustomButton>
 				</form>
 			</div>
 		);
