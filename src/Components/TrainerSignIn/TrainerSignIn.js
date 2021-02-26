@@ -2,6 +2,7 @@ import React from 'react';
 import FormInput from '../FormInput/FormInput.js';
 import CustomButton from '../CustomButton/CustomButton.js';
 import './TrainerSignIn.scss';
+import {withRouter} from 'react-router-dom';
 
 const initialState = {
 	email: '',
@@ -14,17 +15,17 @@ class TraineeSignIn extends React.Component{
 		super(props);
 		this.state = initialState;
 	}
-
+	
 	handleSubmit = (event) => {
 		event.preventDefault();
 		this.setState({email: '', password: ''});
 	}
-
+	
 	handleChange = (event) => {
 		const {value, name} = event.target;
 		this.setState({[name]: value});
 	}
-
+	
 	trainersignin = () => {
 		console.log('click')
 		const sigindata = {
@@ -33,16 +34,24 @@ class TraineeSignIn extends React.Component{
 		} 
 		const headers = new Headers();
 		headers.append('Content-Type','application/json');
-
-		fetch('https://skybox-athlete.herokuapp.com/login',{
-			mode:'no-cors',
-			method:'post',
-			body:sigindata,
-			headers
-		})
-		.then(res=>
-			console.log(res.json())
-		)
+		
+		
+		
+		fetch('https://skybox-athlete.herokuapp.com/login', {
+			method: "post",
+			headers: {
+				"Content-Type": "application/json"
+				},
+				body: JSON.stringify(sigindata)
+	 }).then(res=>res.json())
+	 .then(res=>{
+		 if(res.user){
+			this.props.history.push('/trainer');
+		 }
+		 else if(res.errors){
+			alert('Wrong Credentials');
+		 }
+	 })
 	}
 
 	render(){
@@ -74,4 +83,4 @@ class TraineeSignIn extends React.Component{
 	}
 }
 
-export default TraineeSignIn;
+export default withRouter(TraineeSignIn);

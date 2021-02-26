@@ -32,10 +32,10 @@ const TrainerPage = () => {
                               <td className="pv3 pr3 bb b--black-20">@hassan</td>
                               <td className="pv3 pr3 bb b--black-20">hassan@companywithalongdomain.co</td>
                               <td className="pv3 pr3 bb b--black-20">14419232532474</td>
-                              <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0" onClick={()=>setViewDets(true)} >ViewDets</a></td>
-                              <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0" onClick={()=>setDietModal(true)}>SetDiet</a></td>
-                              <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0" onClick={()=>setworkoutModal(true)}>SetWorkout</a></td>
-                              <td className="pv3 pr3 bb b--black-20"><a className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0">SendMeetingLink</a></td>
+                              <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setViewDets(true)} >ViewDets</p></td>
+                              <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setDietModal(true)}>SetDiet</p></td>
+                              <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setworkoutModal(true)}>SetWorkout</p></td>
+                              <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" href="#0">SendMeetingLink</p></td>
                             </tr>
                                 </tbody>
                             </table>

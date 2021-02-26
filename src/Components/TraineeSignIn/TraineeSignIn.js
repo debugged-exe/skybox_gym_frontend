@@ -25,6 +25,32 @@ class TraineeSignIn extends React.Component{
 		this.setState({[name]: value});
 	}
 
+	traineesignin = () => {
+		console.log('click')
+		const sigindata = {
+			email: this.state.email,
+			password:this.state.password
+		} 
+		const headers = new Headers();
+		headers.append('Content-Type','application/json');
+
+		
+		fetch('https://skybox-athlete.herokuapp.com/login', {
+				method: "post",
+				headers: {
+					 "Content-Type": "application/json"
+				},
+				body: JSON.stringify(sigindata)
+	 }).then(res=>res.json())
+	 .then(res=>{
+		 if(res.user){
+			
+		 }
+		 else if(res.errors){
+			alert('Wrong Credentials');
+		 }
+	 })
+	}
 	render(){
 		return(
 			<div className="sign-in">
@@ -47,7 +73,7 @@ class TraineeSignIn extends React.Component{
 					handleChange={this.handleChange}
 					required
 					/>
-					<CustomButton type="submit">Sign In</CustomButton>
+					<CustomButton type="submit" onClick={this.traineesignin}>Sign In</CustomButton>
 				</form>
 			</div>
 		);
