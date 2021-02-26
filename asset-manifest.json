@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/skybox_gym_frontend/static/css/main.6e5f9f9c.chunk.css",
+    "main.css": "/skybox_gym_frontend/static/css/main.56de10ca.chunk.css",
     "main.js": "/skybox_gym_frontend/static/js/main.a89bb8b2.chunk.js",
     "main.js.map": "/skybox_gym_frontend/static/js/main.a89bb8b2.chunk.js.map",
     "runtime-main.js": "/skybox_gym_frontend/static/js/runtime-main.78dcc1a2.js",
@@ -10,7 +10,7 @@
     "static/js/2.05633471.chunk.js.map": "/skybox_gym_frontend/static/js/2.05633471.chunk.js.map",
     "index.html": "/skybox_gym_frontend/index.html",
     "static/css/2.a8a91664.chunk.css.map": "/skybox_gym_frontend/static/css/2.a8a91664.chunk.css.map",
-    "static/css/main.6e5f9f9c.chunk.css.map": "/skybox_gym_frontend/static/css/main.6e5f9f9c.chunk.css.map",
+    "static/css/main.56de10ca.chunk.css.map": "/skybox_gym_frontend/static/css/main.56de10ca.chunk.css.map",
     "static/js/2.05633471.chunk.js.LICENSE.txt": "/skybox_gym_frontend/static/js/2.05633471.chunk.js.LICENSE.txt",
     "static/media/Home.css": "/skybox_gym_frontend/static/media/HomeBg.da3b7709.png",
     "static/media/Logo.7e9fc9a2.svg": "/skybox_gym_frontend/static/media/Logo.7e9fc9a2.svg",
@@ -20,7 +20,7 @@
     "static/js/runtime-main.78dcc1a2.js",
     "static/css/2.a8a91664.chunk.css",
     "static/js/2.05633471.chunk.js",
-    "static/css/main.6e5f9f9c.chunk.css",
+    "static/css/main.56de10ca.chunk.css",
     "static/js/main.a89bb8b2.chunk.js"
   ]
 }
