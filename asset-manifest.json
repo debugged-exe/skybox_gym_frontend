@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/skybox_gym_frontend/static/css/main.33a4c53c.chunk.css",
-    "main.js": "/skybox_gym_frontend/static/js/main.04134ce9.chunk.js",
-    "main.js.map": "/skybox_gym_frontend/static/js/main.04134ce9.chunk.js.map",
+    "main.css": "/skybox_gym_frontend/static/css/main.d2664277.chunk.css",
+    "main.js": "/skybox_gym_frontend/static/js/main.9713f53c.chunk.js",
+    "main.js.map": "/skybox_gym_frontend/static/js/main.9713f53c.chunk.js.map",
     "runtime-main.js": "/skybox_gym_frontend/static/js/runtime-main.78dcc1a2.js",
     "runtime-main.js.map": "/skybox_gym_frontend/static/js/runtime-main.78dcc1a2.js.map",
     "static/css/2.a8a91664.chunk.css": "/skybox_gym_frontend/static/css/2.a8a91664.chunk.css",
-    "static/js/2.7ed109d8.chunk.js": "/skybox_gym_frontend/static/js/2.7ed109d8.chunk.js",
-    "static/js/2.7ed109d8.chunk.js.map": "/skybox_gym_frontend/static/js/2.7ed109d8.chunk.js.map",
+    "static/js/2.8b171c38.chunk.js": "/skybox_gym_frontend/static/js/2.8b171c38.chunk.js",
+    "static/js/2.8b171c38.chunk.js.map": "/skybox_gym_frontend/static/js/2.8b171c38.chunk.js.map",
     "index.html": "/skybox_gym_frontend/index.html",
     "static/css/2.a8a91664.chunk.css.map": "/skybox_gym_frontend/static/css/2.a8a91664.chunk.css.map",
-    "static/css/main.33a4c53c.chunk.css.map": "/skybox_gym_frontend/static/css/main.33a4c53c.chunk.css.map",
-    "static/js/2.7ed109d8.chunk.js.LICENSE.txt": "/skybox_gym_frontend/static/js/2.7ed109d8.chunk.js.LICENSE.txt",
-    "static/media/Home.css": "/skybox_gym_frontend/static/media/HomeBg.da3b7709.png",
+    "static/css/main.d2664277.chunk.css.map": "/skybox_gym_frontend/static/css/main.d2664277.chunk.css.map",
+    "static/js/2.8b171c38.chunk.js.LICENSE.txt": "/skybox_gym_frontend/static/js/2.8b171c38.chunk.js.LICENSE.txt",
+    "static/media/HomePage.css": "/skybox_gym_frontend/static/media/HomeBg.da3b7709.png",
     "static/media/Logo.7e9fc9a2.svg": "/skybox_gym_frontend/static/media/Logo.7e9fc9a2.svg",
     "static/media/callback_bg.c6308b94.png": "/skybox_gym_frontend/static/media/callback_bg.c6308b94.png"
   },
   "entrypoints": [
     "static/js/runtime-main.78dcc1a2.js",
     "static/css/2.a8a91664.chunk.css",
-    "static/js/2.7ed109d8.chunk.js",
-    "static/css/main.33a4c53c.chunk.css",
-    "static/js/main.04134ce9.chunk.js"
+    "static/js/2.8b171c38.chunk.js",
+    "static/css/main.d2664277.chunk.css",
+    "static/js/main.9713f53c.chunk.js"
   ]
 }
