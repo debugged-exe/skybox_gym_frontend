@@ -7,12 +7,12 @@ const TransformationCards = ({transform}) => {
                 <div className='flex justify-around items-center wrapping'>
                     <section class="tc pa3 pa5-ns">
                         <article class="hide-child relative ba b--black-20 mw5 center">
-                            <img src={transform.beforeUrl} class="db" alt="before" />
+                            <img style={{height:'350px'}} src={transform.beforeUrl} class="db" alt="before" />
                         </article>
                     </section>
                     <section class="tc pa3 pa5-ns">
                         <article class="hide-child relative ba b--black-20 mw5 center">
-                            <img src={transform.afterUrl} class="db" alt="after" />
+                            <img style={{height:'350px'}} src={transform.afterUrl} class="db" alt="after" />
                         </article>
                     </section>
                 </div>
