@@ -1,18 +1,21 @@
 import {React,useState} from 'react';
 import 'tachyons';
 import Modal from 'react-modal';
+import TrainerUpdateInfo from '../../Components/TrainerUpdateInfo/TrainerUpdateInfo';
 
 const TrainerPage = () => {
 
   const [viewDets,setViewDets] = useState(false);
   const [workoutModal,setworkoutModal] = useState(false);
   const [dietModal,setDietModal] = useState(false);
+  const [infoModal,setInfoModal] = useState(false);
         return(
             <div className='flex justify-center items-center flex-column'>
                 <div>
                     <h1>Ankita Zadoo</h1>
                     <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</h3>
                 </div>
+                <p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setInfoModal(true)}>Update Info</p>
                 <div>
                     <h1>Clients</h1>
                     <div className="">
@@ -42,6 +45,10 @@ const TrainerPage = () => {
                             </div>
                         </div>
                 </div>
+              <Modal isOpen={infoModal}>
+              <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setInfoModal(false)} >X</p>
+              <TrainerUpdateInfo/>
+              </Modal>
               <Modal isOpen={viewDets}>
               <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setViewDets(false)} >X</p>
               <div>

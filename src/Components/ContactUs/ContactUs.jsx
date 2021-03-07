@@ -1,5 +1,6 @@
 import React from 'react';
 import RightBg from '../../Assets/callback_bg.png';
+import './ContactUs.css';
 const ContactUs = () => {
     return (
         <section id="enquire" style={{background:'', color:''}} className='flex justify-around items-center flex-wrap'>
@@ -16,7 +17,7 @@ const ContactUs = () => {
                             <div className="mv3">
                                 <label className="db fw6 lh-copy f4" htmlFor="email-address">Name</label>
                                 <input
-                                    className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                                    className="form-input-bg pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                                     type="text"
                                 />
                                 <div className="f4 red">{``}</div>
@@ -24,14 +25,14 @@ const ContactUs = () => {
                             <div className="mv3">
                                 <label className="db fw6 lh-copy f4" htmlFor="email-address">Phone</label>
                                 <input
-                                    className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                                    className="form-input-bg pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                                     type="text" />
                                 <div className="f4 red">{``}</div>
                             </div>
                             <div className="mv3">
                                 <label className="db fw6 lh-copy f4" htmlFor="email-address">Email</label>
                                 <input
-                                    className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                                    className="form-input-bg pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
                                     type="text"
                                 />
                                 <div className="f4 red">{``}</div>
@@ -40,7 +41,7 @@ const ContactUs = () => {
                         <div className="flex justify-center items-center">
                         <input 
                         style={{backgroundColor:'#00D0FF'}}
-                        className="b ph3 pv2 input-reset ba br2 b--black bg-transparent grow pointer f4 dib mb3" 
+                        className=".form-input-bg b ph3 pv2 input-reset ba br2 b--black bg-transparent grow pointer f4 dib mb3" 
                         type="button" 
                         value="Expect a Call Back"/>
                         <div className="f4 red">{``}</div>

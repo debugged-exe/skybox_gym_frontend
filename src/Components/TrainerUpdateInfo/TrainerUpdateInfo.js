@@ -1,7 +1,7 @@
 import React from 'react';
 import FormInput from '../FormInput/FormInput.js';
 import CustomButton from '../CustomButton/CustomButton.js';
-import './TrainerRegister.scss';
+import './TrainerUpdateInfo.scss';
 
 const initialState = {
 			name: '',
@@ -65,11 +65,11 @@ class TrainerRegister extends React.Component {
 	 }).then(res=>res.json())
 	 .then(res=>{
 		 console.log(res);
-		 if(res.status=="success"){
+		 if(res.status==="success"){
 			this.props.history.push('/trainer');
 			console.log('donee')
 		 }
-		 else if(res.status=="failed"){
+		 else if(res.status==="failed"){
 			alert("could not save the data");
 		 }
 	 })
@@ -89,7 +89,7 @@ class TrainerRegister extends React.Component {
 	render() {
 		return(
 			<div className="register">
-				<h2>Enroll as Trainer</h2>
+				<h2>Update Info</h2>
 
 				<form onSubmit={this.handleSubmit}>
 					<FormInput 
@@ -158,7 +158,7 @@ class TrainerRegister extends React.Component {
 					handleChange={this.handleChange}
 					required
 					/>
-					<CustomButton type="submit" onClick={this.trainerUpdateInfo}>Enroll</CustomButton>
+					<CustomButton type="submit" onClick={this.trainerUpdateInfo}>Update</CustomButton>
 				</form>
 			</div>
 		);

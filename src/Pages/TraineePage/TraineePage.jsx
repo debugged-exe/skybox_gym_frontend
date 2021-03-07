@@ -1,6 +1,7 @@
 import {React,useState} from 'react';
 import './TraineePage.scss';
 import Modal from 'react-modal';
+import TraineeUpdateInfo from '../../Components/TraineeUpdateInfo/TraineeUpdateInfo';
 
 const TraineePage = () => {
     const [detsModal,setDetsModal] = useState(false);
@@ -19,18 +20,19 @@ const TraineePage = () => {
                 <p className='f4 mh2'>BMI : <span className='gray'>20</span></p>
             </div>
             <div>
-            <a style={{outline:'none'}} class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2" href="#0" onClick={()=>setDetsModal(true)}>Update Info</a>
-            <a style={{outline:'none'}} class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2" href="#0" onClick={()=>setDietModal(true)}>View Diet</a>
-            <a style={{outline:'none'}} class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2" href="#0" onClick={()=>setworkoutModal(true)}>View Workout</a>
+            <p style={{outline:'none'}} class="pointer f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2" onClick={()=>setDetsModal(true)}>Update Info</p>
+            <p style={{outline:'none'}} class="pointer f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2" onClick={()=>setDietModal(true)}>View Diet</p>
+            <p style={{outline:'none'}} class="pointer f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2" onClick={()=>setworkoutModal(true)}>View Workout</p>
             </div>
             <Modal isOpen={detsModal} >
-            <a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2" href="#0" onClick={()=>setDetsModal(false)}>X</a>
+            <p class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2 pointer" onClick={()=>setDetsModal(false)}>X</p>
+            <TraineeUpdateInfo/>
             </Modal>
             <Modal isOpen={dietModal}>
-            <a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2" href="#0" onClick={()=>setDietModal(false)}>X</a>
+            <p class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2 pointer" onClick={()=>setDietModal(false)}>X</p>
             </Modal>
             <Modal isOpen={workoutModal}>
-            <a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2" href="#0" onClick={()=>setworkoutModal(false)}>X</a>
+            <p class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue mh2 pointer" onClick={()=>setworkoutModal(false)}>X</p>
             </Modal>
         </div>
     );

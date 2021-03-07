@@ -45,6 +45,7 @@
 .point:hover{
     color:#00D0FF;
 }
+
 @media only screen and (max-width: 800px) {
     .cross{
         display: inline-block;

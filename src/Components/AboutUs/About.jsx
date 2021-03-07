@@ -3,18 +3,15 @@ import './About.css';
 
 const About = () => {
     return(
-        <div>
-            <div className='margin'></div>
-            <section className='parallax'>
-                <div className='parallax-inner'>
-                    <h2>About Gym</h2>
-                    <div className='underline'></div>
-                    <p>
-                    “We make a living by what we get, but we make a life by what we give” These Words define the very energy that flows through the heart of Sharva foundation. We here at Sharva Foundation believe in building a community through giving. Our young minds and passion for this is what strives us towards giving the best! Although young, we look forward to do small things with great love. Each and every day a new member joins our family, and we ensure that we will keep expanding without overlooking our priorities. We look forward to see you in our family soon.
-                    </p>
-                </div>
-            </section>
-            <div className='margin'></div>
+        <div id='about' className='flex pa4 flex-column justify-center items-center'> 
+            <h2 className='f2'>About Gym</h2>
+            <div className='underline'></div>
+            <p className='ph5 f4 tc about-padding'>
+            Skybox Athlete is passion project an anti gym that Focuses only on hyper individualized fitness solution..every solutions we present comes from analyzing each client individual physiology and psychology we pattern and approch that takes you from unhappy out of shape and week to exhilaratiled excited about life and extremely strong both physically and mentally.
+            </p>
+            <br/>
+            <p className='ph6 f4 tc about-padding'>We don't play group of individuals we train individuals in group class the weakest person in the class gains the most and anyone in slightly better in shape than the weakest person sees a decrease benefits this is something the bootcamp will hide from you or they simply don't know anything about it
+The philosophy here is skybox Athlete is really special because it is exact opposite</p>
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import FormInput from '../FormInput/FormInput.js';
 import CustomButton from '../CustomButton/CustomButton.js';
-import './TraineeRegister.scss';
+import './TraineeUpdateInfo.scss';
 
 const initialState = {
 	name: '',
@@ -85,7 +85,7 @@ class TraineeRegister extends React.Component {
 	render() {
 		return(
 			<div className="register">
-				<h2>Enroll as Trainee</h2>
+				<h2>Update Info</h2>
 
 				<form onSubmit={this.handleSubmit}>
 					<FormInput 
@@ -169,7 +169,7 @@ class TraineeRegister extends React.Component {
 					handleChange={this.handleChange}
 					required
 					/>
-					<CustomButton type="submit" onClick={this.traineeUpdateInfo}>Enroll</CustomButton>
+					<CustomButton type="submit" onClick={this.traineeUpdateInfo}>Update</CustomButton>
 				</form>
 			</div>
 		);
