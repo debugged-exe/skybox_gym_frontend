@@ -3,8 +3,8 @@ import PackageCard from './PackageCard';
 
 const packagesOnline = [
     {
-        price:'1000',
-        description : 'If it fits, i sits burrow under covers. Destroy couch leave hair everywhere, and touch water with paw then recoil in horror'
+        price:'6000',
+        description : ''
     },
     {
         price:'2000',

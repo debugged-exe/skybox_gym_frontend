@@ -5,14 +5,14 @@ const TransformationCards = ({transform}) => {
     return(
             <div className='w-90 flex justify-center items-center flex-column flex-wrap'>
                 <div className='flex justify-around items-center wrapping'>
-                    <section class="tc pa3 pa5-ns">
+                    <section class="tc pa5-ns">
                         <article class="hide-child relative ba b--black-20 mw5 center">
-                            <img style={{height:'350px'}} src={transform.beforeUrl} class="db" alt="before" />
+                            <img style={{height:'350px',width:'200px'}} src={transform.beforeUrl} class="db" alt="before" />
                         </article>
                     </section>
-                    <section class="tc pa3 pa5-ns">
+                    <section class="tc pa5-ns">
                         <article class="hide-child relative ba b--black-20 mw5 center">
-                            <img style={{height:'350px'}} src={transform.afterUrl} class="db" alt="after" />
+                            <img style={{height:'350px',width:'200px'}} src={transform.afterUrl} class="db" alt="after" />
                         </article>
                     </section>
                 </div>

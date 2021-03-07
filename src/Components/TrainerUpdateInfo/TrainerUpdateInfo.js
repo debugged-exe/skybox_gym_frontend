@@ -65,7 +65,7 @@ class TrainerRegister extends React.Component {
 	 }).then(res=>res.json())
 	 .then(res=>{
 		 console.log(res);
-		 if(res.status=="success"){
+		 if(res.status==="success"){
 			this.props.history.push('/trainer');
 			console.log('donee')
 		 }
