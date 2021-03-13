@@ -2,6 +2,8 @@ import {React,useState,useEffect} from 'react';
 import 'tachyons';
 import Modal from 'react-modal';
 import TrainerUpdateInfo from '../../Components/TrainerUpdateInfo/TrainerUpdateInfo';
+import WorkOutForm from '../../Components/WorkOutForm/WorkOutForm';
+import DietForm from '../../Components/DietForm/DietForm';
 
 const TrainerPage = () => {
 
@@ -83,13 +85,13 @@ const TrainerPage = () => {
               <Modal isOpen={dietModal}>
               <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setDietModal(false)} >X</p>
               <div>
-                diet form
+                <DietForm/>
               </div>
               </Modal>
               <Modal isOpen={workoutModal}>
               <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setworkoutModal(false)} >X</p>
               <div>
-                workout form
+                <WorkOutForm/>
               </div>
               </Modal>
             </div>
