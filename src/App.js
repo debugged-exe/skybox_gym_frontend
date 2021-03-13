@@ -1,5 +1,5 @@
 import './App.css';
-import {Route, Switch, HashRouter} from 'react-router-dom';
+import {Route, Switch, BrowserRouter as Router} from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import HomePage from './Pages/HomePage/HomePage';
@@ -12,8 +12,7 @@ import TrainerUpdateInfo from './Components/TrainerUpdateInfo/TrainerUpdateInfo'
 
 function App() {
   return (
-    <div>
-      <HashRouter basename='/'>
+      <Router basename='/'>
       <Navbar/>
       <Switch>
       <Route exact path='/' component={HomePage}/>
@@ -25,8 +24,7 @@ function App() {
       <Route exact path='/update-tr-info' component={TrainerUpdateInfo}/>
       </Switch>
       <Footer/>
-      </HashRouter>
-    </div>
+      </Router>
   );
 }
 

@@ -46,7 +46,9 @@ class TraineeSignIn extends React.Component{
 	 }).then(res=>res.json())
 	 .then(res=>{
 		 if(res.user){
-			this.props.history.push('/trainer');
+			localStorage.setItem('id',res.user)
+			localStorage.setItem('det_id',res.details_id)
+			this.props.history.push('/trainee');
 		 }
 		 else if(res.errors){
 			alert('Wrong Credentials');
