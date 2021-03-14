@@ -1,4 +1,4 @@
-import {React,useState} from 'react';
+import {React,useState,useEffect} from 'react';
 import 'tachyons';
 import Modal from 'react-modal';
 import TrainerUpdateInfo from '../../Components/TrainerUpdateInfo/TrainerUpdateInfo';
@@ -11,6 +11,24 @@ const TrainerPage = () => {
   const [workoutModal,setworkoutModal] = useState(false);
   const [dietModal,setDietModal] = useState(false);
   const [infoModal,setInfoModal] = useState(false);
+  const [trainees,setTrainees] = useState([]);
+  const [traineeDet,setTraineeDet] = useState(null);
+  const [currUser,setCurrUser] = useState()
+  useEffect(()=>{
+    setCurrUser(localStorage.getItem('id'));
+		const headers = new Headers();
+		headers.append('Content-Type','application/json');
+		
+		
+		
+		fetch('https://skybox-athlete.herokuapp.com/get-my-clients/6036b7774cb92d00152ba9d7', {
+
+	 }).then(res=>res.json())
+	 .then(res=>{
+		 setTrainees(res)
+	 })
+  },[])
+
         return(
             <div className='flex justify-center items-center flex-column'>
                 <div>
@@ -26,22 +44,20 @@ const TrainerPage = () => {
                           <thead>
                             <tr>
                               <th className="fw6 f4 bb b--black-20 tl pb3 pr3 bg-white">Name</th>
-                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3 bg-white">Username</th>
-                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3 bg-white">Email</th>
-                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3 bg-white">ID</th>
+                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3 bg-white">Mode</th>
                             </tr>
                           </thead>
                           <tbody className="lh-copy">
+                          {trainees.map((trainee,index) =>(
                             <tr>
-                              <td className="pv3 pr3 bb b--black-20">HassanJohnson</td>
-                              <td className="pv3 pr3 bb b--black-20">@hassan</td>
-                              <td className="pv3 pr3 bb b--black-20">hassan@companywithalongdomain.co</td>
-                              <td className="pv3 pr3 bb b--black-20">14419232532474</td>
-                              <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setViewDets(true)} >ViewDets</p></td>
+                              <td className="pv3 pr3 bb b--black-20">{trainee.name}</td>
+                              <td className="pv3 pr3 bb b--black-20">{trainee.formOfTraining}</td>
+                              <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>{setViewDets(true);setTraineeDet(trainee)}} >ViewDets</p></td>
                               <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setDietModal(true)}>SetDiet</p></td>
                               <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setworkoutModal(true)}>SetWorkout</p></td>
                               <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" href="#0">SendMeetingLink</p></td>
                             </tr>
+                          ))}
                                 </tbody>
                             </table>
                             </div>
@@ -51,11 +67,20 @@ const TrainerPage = () => {
               <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setInfoModal(false)} >X</p>
               <TrainerUpdateInfo/>
               </Modal>
-              <Modal isOpen={viewDets}>
+              <Modal isOpen={viewDets} >
               <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setViewDets(false)} >X</p>
-              <div>
-                height weight
+              {traineeDet==null ?
+              <div className="black">
+                could not fetch
               </div>
+              :
+              <div className="black">
+                Name : {traineeDet.name}<br/>
+                Gender: {traineeDet.gender}<br/>
+                Contact: {traineeDet.contact}<br/>
+                Target: {traineeDet.target}                
+              </div>
+              }
               </Modal>
               <Modal isOpen={dietModal}>
               <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setDietModal(false)} >X</p>

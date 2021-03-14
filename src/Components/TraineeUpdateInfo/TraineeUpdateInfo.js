@@ -6,14 +6,18 @@ import './TraineeUpdateInfo.scss';
 const initialState = {
 	name: '',
 	email: '',
-	contact:999,
-	gender: 'male',
-	age:22,
+	contact:'',
+	gender: '',
+	age:'',
 	target: '',
 	medical: '',
 	mode: '',
 	place: '',
-	time: ''
+	time: '',
+	height: '',
+	weight: '',
+	bmi: ''
+
 }
 
 class TraineeRegister extends React.Component {
@@ -27,14 +31,17 @@ class TraineeRegister extends React.Component {
 		this.setState({
 			name: '',
 			email: '',
-			contact:999,
-			gender: 'male',
-			age:22,
+			contact:'',
+			gender: '',
+			age:'',
 			target: '',
 			medical: '',
 			mode: '',
 			place: '',
-			time: ''
+			time: '',
+			height: '',
+			weight: '',
+			bmi: ''
 		})
 	}
 
@@ -45,7 +52,7 @@ class TraineeRegister extends React.Component {
 
 	traineeUpdateInfo = () => {
 		console.log('click')
-		const {name,email,contact,gender,age,target,medical,mode,place,time} = this.state;
+		const {name,email,contact,gender,age,target,medical,mode,place,time,height,weight,bmi} = this.state;
 		const info = {
 			name: name,
 			email: email,
@@ -56,14 +63,18 @@ class TraineeRegister extends React.Component {
 			medical: medical,
 			mode: mode,
 			place: place,
-			time: time
+			time: time,
+			height: height,
+			weight: weight,
+			bmi: bmi
 		} 
 		const headers = new Headers();
 		headers.append('Content-Type','application/json');
 		
+		const currUserDetID = localStorage.getItem('id')
+		console.log('curr is ' +currUserDetID)
 		
-		
-		fetch('https://skybox-athlete.herokuapp.com/update-trainee', {
+		fetch('https://skybox-athlete.herokuapp.com/update-trainee/'+currUserDetID, {
 			method: "post",
 			headers: {
 				"Content-Type": "application/json"
@@ -73,7 +84,7 @@ class TraineeRegister extends React.Component {
 	 .then(res=>{
 		 console.log(res);
 		 if(res.status=="success"){
-			this.props.history.push('/trainer');
+			// this.props.history.push('/trainer');
 			console.log('donee')
 		 }
 		 else if(res.status=="failed"){
@@ -101,6 +112,61 @@ class TraineeRegister extends React.Component {
 					name="email"
 					type="email"
 					value={this.state.email}
+					handleChange={this.handleChange}
+					required
+					/>
+					<FormInput 
+					label="Contact"
+					name="contact"
+					type="text"
+					value={this.state.contact}
+					handleChange={this.handleChange}
+					required
+					/>
+					<div className="group">
+						<select
+						name="gender"
+						value={this.state.gender} 
+						className="form-input" 
+						onChange={this.handleChange}
+						required>
+							<option className="form-input" value=""></option>
+							<option className="form-input" value="male">Male</option>
+							<option className="form-input" value="female">Female</option>
+						</select>
+						<label className={`${this.state.gender.length ? 'shrink' : ''} form-input-label`}>
+							Gender	
+						</label>
+					</div>
+					<FormInput 
+					label="Age"
+					name="age"
+					type="text"
+					value={this.state.age}
+					handleChange={this.handleChange}
+					required
+					/>
+					<FormInput 
+					label="Height"
+					name="height"
+					type="text"
+					value={this.state.height}
+					handleChange={this.handleChange}
+					required
+					/>
+					<FormInput 
+					label="Weight"
+					name="weight"
+					type="text"
+					value={this.state.weight}
+					handleChange={this.handleChange}
+					required
+					/>
+					<FormInput 
+					label="BMI"
+					name="bmi"
+					type="text"
+					value={this.state.bmi}
 					handleChange={this.handleChange}
 					required
 					/>
