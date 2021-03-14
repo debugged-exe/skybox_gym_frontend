@@ -40,7 +40,6 @@ const Navbar = ()  => {
                     <ul style={{listStyle:'none'}} className={`flex ph4 ${navbar} justify-center items-center ${dropdown}`}>
                         <Link style={{cursor:'point',backgroundColor:'#00D0FF'}} className='f4 grow ph3 mv0 br2 black b pa2 pointer flex justify-center items-center' to='/#enquire'>Enquire Now</Link>
                         <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='/'>Home</Link>
-                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>Events</Link>
                         <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>Blog</Link>
                         <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>About Us</Link>
                         <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>Contact Us</Link>
