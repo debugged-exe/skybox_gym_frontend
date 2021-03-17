@@ -43,8 +43,8 @@ const TrainerPage = () => {
                         <table className="f6 w-100 mw8 center" cellspacing="0">
                           <thead>
                             <tr>
-                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3 bg-white">Name</th>
-                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3 bg-white">Mode</th>
+                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3">Name</th>
+                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3">Mode</th>
                             </tr>
                           </thead>
                           <tbody className="lh-copy">
