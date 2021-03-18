@@ -1,12 +1,32 @@
-import React from 'react';
-import {MdModeEdit} from 'react-icons/md';
-import {RiDeleteBinFill} from 'react-icons/ri';
+import React,{useState} from 'react';
 import {IoIosAddCircle} from 'react-icons/io';
+import DietRow from './DietRow';
+
+
 const DietForm = () => {
+
+const [diet,setDiet] = useState([	
+		{
+			time:"9:00 am",
+			item:"apple",
+			qty:"1"
+		},
+		{
+			time:"10:00 am",
+			item:"banana",
+			qty:"1"
+		},
+		{
+			time:"11:00 am",
+			item:"guava",
+			qty:"2"
+		}
+	    ])
+
     return(
         <div className='black'>
             <div class="pa4">
-              <div class="overflow-auto">
+              <div class="flex flex-column items-center overflow-auto">
                 <table class="f4 w-100 mw8 center" cellspacing="0">
                   <thead>
                     <tr>
@@ -16,16 +36,16 @@ const DietForm = () => {
                     </tr>
                   </thead>
                   <tbody class="lh-copy">
-                    <tr>
-                      <td class="pv3 pr3 bb b--black-20"><input id="name" class="input-reset ba b--black-20 pa2 mb2 db" type="text" aria-describedby="name-desc"/></td>
-                      <td class="pv3 pr3 bb b--black-20"><input id="name" class="input-reset ba b--black-20 pa2 mb2 db" type="text" aria-describedby="name-desc"/></td>
-                      <td class="pv3 pr3 bb b--black-20"><input id="name" class="input-reset ba b--black-20 pa2 mb2 db" type="text" aria-describedby="name-desc"/></td>
-                      <td><a class="f2 link dim ph3 pv0 mb2 dib white bg-dark-blue" href="#0"><MdModeEdit size={'1.5rem'}/></a></td>
-                      <td><a class="f2 link dim ph3 pv0 mb2 dib white bg-dark-blue" href="#0"><RiDeleteBinFill size={'1.5rem'}/></a></td>
-                      <td><a class="f2 link dim ph3 pv0 mb2 dib white bg-dark-blue" href="#0"><IoIosAddCircle size={'1.5rem'}/></a></td>
-                    </tr>
+                    {
+                      diet.map((item,idx)=>{
+                        return(
+                          <DietRow key={idx} content = {item}/>
+                        )
+                      })
+                    }
                   </tbody>
                 </table>
+                <IoIosAddCircle className='ma2 pointer' size={'2.6rem'} color={'#00449e'}/>
               </div>
             </div>
             <a class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue" href="#0">Set Diet</a>
