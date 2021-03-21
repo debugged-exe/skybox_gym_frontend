@@ -2,6 +2,8 @@ import {React,useState,useEffect} from 'react';
 import 'tachyons';
 import Modal from 'react-modal';
 import TrainerUpdateInfo from '../../Components/TrainerUpdateInfo/TrainerUpdateInfo';
+import WorkOutForm from '../../Components/WorkOutForm/WorkOutForm';
+import DietForm from '../../Components/DietForm/DietForm';
 
 const TrainerPage = () => {
 
@@ -12,12 +14,19 @@ const TrainerPage = () => {
   const [trainees,setTrainees] = useState([]);
   const [traineeDet,setTraineeDet] = useState(null);
   const [currUser,setCurrUser] = useState()
+  const [currUserDet,setCurrUserDet] = useState();
   useEffect(()=>{
     setCurrUser(localStorage.getItem('id'));
 		const headers = new Headers();
 		headers.append('Content-Type','application/json');
-		
-		
+		console.log('curr '+currUser)
+		fetch('https://skybox-athlete.herokuapp.com/get-trainer/'+currUser, {
+
+	 }).then(res=>res.json())
+	 .then(res=>{
+		 setCurrUserDet(res)
+     console.log(res)
+	 })
 		
 		fetch('https://skybox-athlete.herokuapp.com/get-my-clients/6036b7774cb92d00152ba9d7', {
 
@@ -30,7 +39,7 @@ const TrainerPage = () => {
         return(
             <div className='flex justify-center items-center flex-column'>
                 <div>
-                    <h1>Ankita Zadoo</h1>
+                    <h1>{currUserDet.email}</h1>
                     <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</h3>
                 </div>
                 <p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setInfoModal(true)}>Update Info</p>
@@ -41,8 +50,8 @@ const TrainerPage = () => {
                         <table className="f6 w-100 mw8 center" cellspacing="0">
                           <thead>
                             <tr>
-                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3 bg-white">Name</th>
-                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3 bg-white">Mode</th>
+                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3">Name</th>
+                              <th className="fw6 f4 bb b--black-20 tl pb3 pr3">Mode</th>
                             </tr>
                           </thead>
                           <tbody className="lh-copy">
@@ -52,7 +61,7 @@ const TrainerPage = () => {
                               <td className="pv3 pr3 bb b--black-20">{trainee.formOfTraining}</td>
                               <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>{setViewDets(true);setTraineeDet(trainee)}} >ViewDets</p></td>
                               <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setDietModal(true)}>SetDiet</p></td>
-                              <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setworkoutModal(true)}>SetWorkout</p></td>
+                              <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>{setworkoutModal(true);setTraineeDet(trainee)}}>SetWorkout</p></td>
                               <td className="pv3 pr3 bb b--black-20"><p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" href="#0">SendMeetingLink</p></td>
                             </tr>
                           ))}
@@ -83,13 +92,13 @@ const TrainerPage = () => {
               <Modal isOpen={dietModal}>
               <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setDietModal(false)} >X</p>
               <div>
-                diet form
+                <DietForm/>
               </div>
               </Modal>
               <Modal isOpen={workoutModal}>
               <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setworkoutModal(false)} >X</p>
               <div>
-                workout form
+                <WorkOutForm det={traineeDet}/>
               </div>
               </Modal>
             </div>
