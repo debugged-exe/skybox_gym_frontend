@@ -42,26 +42,7 @@ class WorkOutForm extends React.Component{
                 }
             })
     }  
-    // useEffect(()=>{
-
-    //         setWorkout(this.props.det.workout)
-    //         console.log(workout)
-
-    //     // setCurrUser(localStorage.getItem('this.props.det_id'));
-    //     //     const headers = new Headers();
-    //     //     headers.append('Content-Type','application/json');
-            
-    //     //     if(currUser!=''){
-    //     //         console.log(currUser)
-    //     //     fetch('https://skybox-athlete.herokuapp.com/get-workout/'+currUser, {
     
-    //     //  }).then(res=>res.json())
-    //     //  .then(res=>{
-    //     //      setWorkout(res)
-    //     //      console.log(workout)
-    //     //  })
-    //     // }
-    //   })
     render(){  
     return(
         <div>

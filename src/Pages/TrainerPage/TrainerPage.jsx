@@ -25,7 +25,6 @@ const TrainerPage = () => {
 	 }).then(res=>res.json())
 	 .then(res=>{
 		 setCurrUserDet(res)
-     console.log(res)
 	 })
 		
 		fetch('https://skybox-athlete.herokuapp.com/get-my-clients/6036b7774cb92d00152ba9d7', {
