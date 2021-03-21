@@ -24,21 +24,22 @@ const TrainerPage = () => {
 
 	 }).then(res=>res.json())
 	 .then(res=>{
-		 setCurrUserDet(res)
+		 setCurrUserDet(res.email)
 	 })
-		
-		fetch('https://skybox-athlete.herokuapp.com/get-my-clients/6036b7774cb92d00152ba9d7', {
+
+   const detailID = localStorage.getItem('det_id')
+		fetch('https://skybox-athlete.herokuapp.com/get-my-clients/'+detailID, {
 
 	 }).then(res=>res.json())
 	 .then(res=>{
 		 setTrainees(res)
 	 })
-  },[])
+  })
 
         return(
             <div className='flex justify-center items-center flex-column'>
                 <div>
-                    <h1>{currUserDet.email}</h1>
+                    <h1>{currUserDet}</h1>
                     <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</h3>
                 </div>
                 <p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setInfoModal(true)}>Update Info</p>
