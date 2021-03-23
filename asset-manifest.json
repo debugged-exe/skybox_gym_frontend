@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/skybox_gym_frontend/static/css/main.da80085b.chunk.css",
-    "main.js": "/skybox_gym_frontend/static/js/main.f290279d.chunk.js",
-    "main.js.map": "/skybox_gym_frontend/static/js/main.f290279d.chunk.js.map",
+    "main.js": "/skybox_gym_frontend/static/js/main.9829e80d.chunk.js",
+    "main.js.map": "/skybox_gym_frontend/static/js/main.9829e80d.chunk.js.map",
     "runtime-main.js": "/skybox_gym_frontend/static/js/runtime-main.78dcc1a2.js",
     "runtime-main.js.map": "/skybox_gym_frontend/static/js/runtime-main.78dcc1a2.js.map",
     "static/css/2.30a7c6bf.chunk.css": "/skybox_gym_frontend/static/css/2.30a7c6bf.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.30a7c6bf.chunk.css",
     "static/js/2.a3056a13.chunk.js",
     "static/css/main.da80085b.chunk.css",
-    "static/js/main.f290279d.chunk.js"
+    "static/js/main.9829e80d.chunk.js"
   ]
 }
