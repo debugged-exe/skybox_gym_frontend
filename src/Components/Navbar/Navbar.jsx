@@ -38,9 +38,8 @@ const Navbar = ()  => {
             </span>
                 <span className={`${dropdown}`}>
                     <ul style={{listStyle:'none'}} className={`flex ph4 ${navbar} justify-center items-center ${dropdown}`}>
-                        <Link style={{cursor:'point',backgroundColor:'#00D0FF'}} className='f4 grow ph3 mv0 br2 black b pa2 pointer flex justify-center items-center' to='/#enquire'>Enquire Now</Link>
+                        <a style={{cursor:'point',backgroundColor:'#00D0FF'}} className='f4 grow ph3 mv0 br2 black b pa2 pointer flex justify-center items-center' href='tel:7006616995'>Enquire Now</a>
                         <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='/'>Home</Link>
-                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>Blog</Link>
                         <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>About Us</Link>
                         <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>Contact Us</Link>
                         <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='/signin'>SignIn</Link>

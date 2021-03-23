@@ -9,8 +9,16 @@ import TrainerPage from './Pages/TrainerPage/TrainerPage';
 import TraineePage from './Pages/TraineePage/TraineePage';
 import AdminPage from './Pages/AdminPage/AdminPage';
 import TrainerUpdateInfo from './Components/TrainerUpdateInfo/TrainerUpdateInfo';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect (()=>{
+    Aos.init({duration:2000})
+  },[]);
+  
   return (
       <Router basename='/'>
       <Navbar/>

@@ -83,11 +83,11 @@ class TraineeRegister extends React.Component {
 	 }).then(res=>res.json())
 	 .then(res=>{
 		 console.log(res);
-		 if(res.status=="success"){
+		 if(res.status==="success"){
 			// this.props.history.push('/trainer');
 			console.log('donee')
 		 }
-		 else if(res.status=="failed"){
+		 else if(res.status==="failed"){
 			alert("could not save the data");
 		 }
 	 })

@@ -16,8 +16,8 @@ const TransformationCards = ({transform}) => {
                         </article>
                     </section>
                 </div>
-                <h2 className='ma0'>{transform.name}</h2>
-                <p className='pa4 tc padding pt0'>{transform.transformationStory}</p>
+                <h2 className='ma0'  data-aos='fade-up'>{transform.name}</h2>
+                <p className='pa4 tc padding pt0'  data-aos='fade-up'>{transform.transformationStory}</p>
             </div>
     );
 }

@@ -40,7 +40,6 @@ const TrainerPage = () => {
             <div className='flex justify-center items-center flex-column'>
                 <div>
                     <h1>{currUserDet}</h1>
-                    <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</h3>
                 </div>
                 <p className="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue pointer" onClick={()=>setInfoModal(true)}>Update Info</p>
                 <div>
@@ -76,7 +75,7 @@ const TrainerPage = () => {
               </Modal>
               <Modal isOpen={viewDets} >
               <p className="f6 pointer link dim ph3 pv2 mb2 dib white bg-dark-blue" onClick={()=>setViewDets(false)} >X</p>
-              {traineeDet==null ?
+              {traineeDet===null ?
               <div className="black">
                 could not fetch
               </div>

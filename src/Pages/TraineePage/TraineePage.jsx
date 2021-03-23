@@ -16,7 +16,7 @@ const TraineePage = () => {
             const headers = new Headers();
             headers.append('Content-Type','application/json');
             
-            if(currUser!=''){
+            if(currUser!==''){
                 console.log('fetchingg')
             fetch('https://skybox-athlete.herokuapp.com/get-trainee/'+currUser, {
     
@@ -25,14 +25,12 @@ const TraineePage = () => {
              setTrainee(res)
          })
         }
-      })
+      },[currUser])
 
     return(
         <div className='pl3 pt3 trainee-bg white pb4'>
             <h1 className='ma0'>{trainee.email}</h1>
             <h1 className='ma0'>{trainee.name}</h1>
-            <h3 className='mh2'>Joined : <span className='gray'>22/12/2021</span> </h3>
-            <h3 className='mh2'>Ends : <span className='gray'>22/12/2021</span> </h3>
             <h1>Basic Info</h1>
             <div>
                 <p className='f4 mh2'>Age : <span className='gray'>{trainee.age}</span></p>
