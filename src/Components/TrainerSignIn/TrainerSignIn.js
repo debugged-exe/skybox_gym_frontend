@@ -47,6 +47,7 @@ class TraineeSignIn extends React.Component{
 	 .then(res=>{
 		 if(res.user){
 			 localStorage.setItem('id',res.user)
+			 localStorage.setItem('det_id',res.details_id)
 			this.props.history.push('/trainer');
 		 }
 		 else if(res.errors){
