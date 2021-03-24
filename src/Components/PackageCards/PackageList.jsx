@@ -87,7 +87,7 @@ class PackageList extends React.Component {
                 this.setState({ol:'false',underlineOl:false})
         }
         return (
-            <div className='mv5 pb6 pt4'>
+            <div className='mv2 pb6 pt4'>
             <div className='white'>
                 <h1 className='tc'  data-aos='fade-up'>Training</h1>
                 <h1 className='tc' data-aos='fade-up'><span style={{color:'#00D0ff'}}  data-aos='fade-up'>Services</span> We Offer</h1>
