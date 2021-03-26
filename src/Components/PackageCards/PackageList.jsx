@@ -4,6 +4,11 @@ import PackageCard from './PackageCard';
 
 const packagesOffline = [
     {
+        price:'FREE',
+        description1 : '1 on 1',
+        description2 : 'Demo Session'
+    },
+    {
         price:'4000',
         description1 : '1 Month Programme',
         description2 : '12 Sessions'
@@ -46,6 +51,11 @@ const packagesOffline = [
 ]
 const packagesOnline = [
     {
+        price:'FREE',
+        description1 : '1 on 1',
+        description2 : 'Demo Session'
+    },
+    {
         price:'6000',
         description1 : '1 on 1',
         description2 : '12 Sessions Programme'
@@ -53,7 +63,7 @@ const packagesOnline = [
     {
         price:'10000',
         description1 : 'Couples',
-        description2 : '21 Sessions Programme'
+        description2 : '12 Sessions Programme'
     },
     {
         price:'8000',

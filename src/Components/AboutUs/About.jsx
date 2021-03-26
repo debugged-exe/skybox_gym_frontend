@@ -3,7 +3,7 @@ import './About.css';
 
 const About = () => {
     return(
-        <div id='about' className='flex pt0 ph6 flex-column justify-center items-center'> 
+        <div id='about' className='flex pt0 ph6 flex-column justify-center items-center padding'> 
             <h2 className='f2' data-aos='fade-up'>About Gym</h2>
             <div className='underline'></div>
             <p   data-aos='fade-up' className='ph5 f4 tc about-padding'>
