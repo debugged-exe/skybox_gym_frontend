@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import 'tachyons';
-import {Link} from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import './Navbar.css';
 import {ReactComponent as Logo} from '../../Assets/Logo.svg';
 
@@ -40,8 +40,8 @@ const Navbar = ()  => {
                     <ul style={{listStyle:'none'}} className={`flex ph4 ${navbar} justify-center items-center ${dropdown}`}>
                         <a style={{cursor:'point',backgroundColor:'#00D0FF'}} className='f4 grow ph3 mv0 br2 black b pa2 pointer flex justify-center items-center' href='tel:7006616995'>Enquire Now</a>
                         <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='/'>Home</Link>
-                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>About Us</Link>
-                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='#0'>Contact Us</Link>
+                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='/#about'>About Us</Link>
+                        <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='/#contactus'>Contact Us</Link>
                         <Link className='none ph3 f4 mv0 tc pt2 point btn btn-left pointer pl2 flex justify-center items-center' to='/signin'>SignIn</Link>
                         <p className='tc'><Link className={`f6 link dim ph3 pv2 mb2 dib white bg-dark-blue cross flex justify-center items-center`} href='#0'
                         onClick={()=>hamburger()}

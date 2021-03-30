@@ -3,10 +3,31 @@ import RightBg from '../../Assets/callback_bg.png';
 import './ContactUs.css';
 const ContactUs = () => {
     return (
-        <section id="enquire" style={{background:'', color:''}} className='flex justify-around items-center flex-wrap'>
-            <span>
+        <section id="contactus" style={{background:'', color:''}} className='flex justify-around items-start mt3 flex-wrap'>
+            <span className='pv3'>
                 <div  data-aos='fade-up'>
-                    <img src={RightBg} alt='bumbell' />
+                    <div>
+
+                        <div>
+                            <p className='f3 b'>Address :</p>
+                            <a href='https://goo.gl/maps/ZAvvpLFfzfbWX7gNA' className='f4'>Ashtavinayak Nagar, Pratik Nagar,</a> <br/>
+                            <a href='https://goo.gl/maps/ZAvvpLFfzfbWX7gNA' className='f4'>Chandan Nagar, Pune, Maharashtra 411014</a>
+                        </div>
+                    </div>
+                    <div>
+
+                        <div>
+                            <p className='f3 b'>Contact Details :</p>
+                            <p className='f4'>+91 9168894490, +91 7006616995</p>
+                        </div>
+                    </div>
+                    <div>
+
+                        <div>
+                            <p className='f3 b'>Mail :</p>
+                            <a href='mailto:skyboxathlete@gmail.com' className='f4'>skyboxathlete@gmail.com</a>
+                        </div>
+                    </div>
                 </div>
             </span>
             <span className='flex items-center pv4 justify-center'>

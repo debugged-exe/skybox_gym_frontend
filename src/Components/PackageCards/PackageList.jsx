@@ -9,42 +9,42 @@ const packagesOffline = [
         description2 : 'Demo Session'
     },
     {
-        price:'4000',
+        price:'Rs. 4000 /-',
         description1 : '1 Month Programme',
         description2 : '12 Sessions'
     },
     {
-        price:'6000',
+        price:'Rs. 6000 /-',
         description1 : '1 Month Programme',
         description2 : '24 Sessions'
     },
     {
-        price:'7500',
+        price:'Rs. 7500 /-',
         description1 : '2 Months Programme',
         description2 : '24 Sessions'
     },
     {
-        price:'11500',
+        price:'Rs. 11500 /-',
         description1 : '2 Months Programme',
         description2 : '48 Sessions'
     },
     {
-        price:'11000',
+        price:'Rs. 11000 /-',
         description1 : '2 Months Programme',
         description2 : '36 Sessions'
     },
     {
-        price:'16500',
+        price:'Rs. 16500 /-',
         description1 : '100 Days',
         description2 : 'Body Transformation Programee'
     },
     {
-        price:'60000',
+        price:'Rs. 60000 /-',
         description1 : '3 Months Regular Programme',
         description2 : '4 People Mini Group'
     },
     {
-        price:'4000',
+        price:'Rs. 4000 /-',
         description1 : '12 Sessions',
         description2 : '3 Months Validity'
     }
@@ -56,17 +56,17 @@ const packagesOnline = [
         description2 : 'Demo Session'
     },
     {
-        price:'6000',
+        price:'Rs. 6000 /-',
         description1 : '1 on 1',
         description2 : '12 Sessions Programme'
     },
     {
-        price:'10000',
+        price:'Rs. 10000 /-',
         description1 : 'Couples',
         description2 : '12 Sessions Programme'
     },
     {
-        price:'8000',
+        price:'Rs. 8000 /-',
         description1 : 'Full Body Transformation',
         description2 : '12 Weeks Programme'
     }

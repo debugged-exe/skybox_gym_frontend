@@ -13,7 +13,7 @@ const [counterArray, setCounterArray] = useState([
     },
     {
         'name':'trainee',
-        'count':'31'
+        'count':'750'
     }
 ]);
 
